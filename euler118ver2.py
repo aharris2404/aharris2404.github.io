@@ -1,5 +1,3 @@
-# First, generate three data sets. (1) A dictionary which stores the number of prime permutations of a freely concatenated set of digits, (2) A list which stores all the partitions of 9, and (3) A list which tracks the digits 1-9.
-
 import math
 
 def trialdivision(n): # returns True if n is prime
@@ -130,16 +128,12 @@ def get_spec_part(partition, ref): #given a partition of the reference, returns 
     for i in range(len(combinations)):
         dummy_ref = ref.copy()
 
-        # POSSIBLE BOOLEAN CHECK GOES HERE
-
         r = get_spec_part(partition[1:], update_reference(combinations[i], dummy_ref))
 
         for j in range(len(r)):
 
             if partition[0] != partition[1] or concatenate_to_int(combinations[i]) < r[j][0]:
-                #print('partitions[0] (' + str(partition[0]) + ') != partitions[1] (' + str(partition[1]) + ')')
                 ans.append([concatenate_to_int(combinations[i])] + r[j])
-                #print(ans)
 
     return ans
 
@@ -171,7 +165,5 @@ reference = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 partitions = get_partitions(len(reference))
 prime_permutations_list = initialize_prime_permutations_list(reference)
 spec_parts_list = get_all_spec_parts(partitions, reference)
-print(prime_permutations_list)
-print(spec_parts_list)
 answer = count_prime_configs(prime_permutations_list, spec_parts_list)
 print(answer)
