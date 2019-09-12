@@ -1,18 +1,18 @@
-#Euler Problem \#54 Solution
+# Euler Problem \#54 Solution
 
-##Problem
+## Problem
 
 [Project Euler Problem \#54](https://projecteuler.net/problem=54) asks one to read a [large file](euler54_poker.txt) containing two players' hands in $1000$ rounds of poker, and determine in how many of those rounds Player One had the winning hand.
 
-##Solution
+## Solution
 
 [Here is the code.](euler54.py)
 
-###Brief Overview
+### Brief Overview
 
 First we clean and enhance the data, storing each card in a hand as a three-digit integer where the first two digits track card rank (2 through Ace) and the final digit tracks card suit. Then we iterate over the number of rounds in the text file, checking at each stage for each player if they had: a straight flush, a flush, a straight, some configuration of cards of repeated rank (pair, triple, four-of-a-kind, two pair, or full house), or nothing at all. If Player One had a hand which outranked Player Two's, we increment our answer by one. If the hands were tied, we check the sorted hands of Player One and two to see who had the higher card, and then increment if that was Player One.
 
-###Somewhat-Less-Brief Overview
+### Somewhat-Less-Brief Overview
 
 The solution will work in the following steps:
 
@@ -29,19 +29,19 @@ The solution will work in the following steps:
 11. Loop through steps 4-10 for the number of hands.
 12. Return the number of hands won by player one.
 
-###Solution Advantages
+### Solution Advantages
 
 * Adheres to black-box paradigm
 * Generalizable for different numbers of hands than 1000
 * Fast runtime which scales linearly with number of hands
 
-###Solution Disadvantages
+### Solution Disadvantages
 
 * Over 100 lines of code
 * Not generalizable for different numbers of players (though could be with some simple modifications)
 * Not "smart" enough to clean data in a different format than the specific format used in the provided text file
 
-###Time Complexity
+### Time Complexity
 
 Let $n$ be the number of rounds provided.
 
@@ -51,6 +51,6 @@ For specifically two players with hands of five cards, all the per-hand checks w
 
 Thus the total runtime is $O(n)$.
 
-##Results
+## Results
 
 For the case given in the problem, this code produces the correct result that Player One won $376$ hands in total. On my machine, it runs in under one second.
