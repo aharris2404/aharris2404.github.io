@@ -1,10 +1,10 @@
-pokerAssignments = {'2': 20, '3': 30, '4': 40, '5': 50, '6': 60, '7': 70, '8': 80, '9': 90, 'T': 100, 'J': 110, 'Q': 120, 'K': 130, 'A': 140, 'C': 0, 'S': 1, 'H': 2, 'D': 3}
+pokerAssignments = {'2': 20, '3': 30, '4': 40, '5': 50, '6': 60, '7': 70, '8': 80, '9': 90, 'T': 100, 'J': 110, 'Q': 120, 'K': 130, 'A': 140, 'C': 0, 'S': 1, 'H': 2, 'D': 3} #Used to assign each card to a unique three-digit integer
 
-configScoring = {(1, 1): 0, (1, 2): 1, (2, 2): 2, (1, 3): 3, (2, 3): 6, (1, 4): 7}
+configScoring = {(1, 1): 0, (1, 2): 1, (2, 2): 2, (1, 3): 3, (2, 3): 6, (1, 4): 7} #Tracks hand scores for (respectively) high card, pair, two pair, three-of-a-kind, full house, and four-of-a-kind
 
-scoreValues = {0: 'High Card', 1: 'Pair', 2: '2 Pair', 3: '3 of a Kind', 4: 'Straight', 5: 'Flush', 6: 'Full House', 7: '4 of a Kind', 8: 'Straight Flush'}
+scoreValues = {0: 'High Card', 1: 'Pair', 2: '2 Pair', 3: '3 of a Kind', 4: 'Straight', 5: 'Flush', 6: 'Full House', 7: '4 of a Kind', 8: 'Straight Flush'} #This data object is purely to enhance readability by demonstrating what type of hand each hand score corresponds to
 
-def initialize(): #initalizes hands_list
+def initialize(): #initalizes hands_list, assigns each card in a hand to a unique three-digit integer
     hands_file = open("euler54_poker.txt")
     hands_string = hands_file.read()
     tempList = []
@@ -50,7 +50,7 @@ def check_straight(hand): #checks if a reverse sorted hand is a straight
 
     return True
 
-def check_copies(hand): #checks if a hand has any pairs, three of a kind, etc. and sorts it accordingly
+def check_copies(hand): #checks if a hand has any pairs, three of a kind, two pair, etc. and sorts it accordingly
     config = []
     hand.sort()
 
@@ -97,7 +97,7 @@ def score_hand(hand): #returns a number 0-8 for the hand the player has and the 
         hand, config_one, config_two = check_copies(hand)
         return hand, configScoring[config_one, config_two]
 
-def compare(hand_one, hand_two): #returns the number of the winning player if players have same score
+def compare(hand_one, hand_two): #returns the number of the winning player if players have same hand score (who has higher card in tiebreak?)
 
     for i in range(5):
         if hand_one[i] // 10 > hand_two[i] // 10:
