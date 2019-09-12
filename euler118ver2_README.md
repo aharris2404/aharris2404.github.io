@@ -53,3 +53,7 @@ $$O(\sum_{k=1}^{n} \frac{n!}{(n-k)!})=O(n(10^\frac{n}{2})+n(n-1)(10^\frac{n}{2})
 For which a simple worst-case upper bound is:
 
 $$O(n\cdot n! \cdot 10^\frac{n}{2}) \leq O(n \cdot (n \sqrt10)^{n})$$
+
+###Results
+
+For the case given in the problem, this code produces the correct answer that there are $44,680$ unique freely partitioned/permuted sets that can be generated. On my machine, it does so in about 40 seconds.
