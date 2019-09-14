@@ -2,7 +2,7 @@
 
 ## Problem
 
-[Project Euler Problem \#54](https://projecteuler.net/problem=54) asks one to read a [large file](euler54_poker.txt) containing two players' hands in <img src="https://rawgit.com/aharris2404/aharris2404.github.io/None/svgs/675eeb554f7b336873729327dab98036.svg?invert_in_darkmode" align=middle width=32.876837399999985pt height=21.18721440000001pt/> rounds of poker, and determine in how many of those rounds Player One had the winning hand.
+[Project Euler Problem \#54](https://projecteuler.net/problem=54) asks one to read a [large file](euler54_poker.txt) containing two players' hands in <img src="https://rawgit.com/aharris2404/aharris2404.github.ioarris2404.github.io/master/svgs/675eeb554f7b336873729327dab98036.svg?invert_in_darkmode" align=middle width=32.876837399999985pt height=21.18721440000001pt/> rounds of poker, and determine in how many of those rounds Player One had the winning hand.
 
 ## Solution
 
@@ -43,14 +43,14 @@ The solution will work in the following steps:
 
 ### Time Complexity
 
-Let <img src="https://rawgit.com/aharris2404/aharris2404.github.io/None/svgs/55a049b8f161ae7cfeb0197d75aff967.svg?invert_in_darkmode" align=middle width=9.86687624999999pt height=14.15524440000002pt/> be the number of rounds provided.
+Let <img src="https://rawgit.com/aharris2404/aharris2404.github.ioarris2404.github.io/master/svgs/55a049b8f161ae7cfeb0197d75aff967.svg?invert_in_darkmode" align=middle width=9.86687624999999pt height=14.15524440000002pt/> be the number of rounds provided.
 
-Since the data-cleaning process iterates over the number of rounds and involves constant-time removal of spaces and linebreaks, and concludes with constant-time assignment of each card to an integer, that phase runs in <img src="https://rawgit.com/aharris2404/aharris2404.github.io/None/svgs/1f08ccc9cd7309ba1e756c3d9345ad9f.svg?invert_in_darkmode" align=middle width=35.64773519999999pt height=24.65753399999998pt/> time.
+Since the data-cleaning process iterates over the number of rounds and involves constant-time removal of spaces and linebreaks, and concludes with constant-time assignment of each card to an integer, that phase runs in <img src="https://rawgit.com/aharris2404/aharris2404.github.ioarris2404.github.io/master/svgs/1f08ccc9cd7309ba1e756c3d9345ad9f.svg?invert_in_darkmode" align=middle width=35.64773519999999pt height=24.65753399999998pt/> time.
 
-For specifically two players with hands of five cards, all the per-hand checks which score the hands and break ties run in constant time. Thus, scoring all the rounds runs in <img src="https://rawgit.com/aharris2404/aharris2404.github.io/None/svgs/1f08ccc9cd7309ba1e756c3d9345ad9f.svg?invert_in_darkmode" align=middle width=35.64773519999999pt height=24.65753399999998pt/> time.
+For specifically two players with hands of five cards, all the per-hand checks which score the hands and break ties run in constant time. Thus, scoring all the rounds runs in <img src="https://rawgit.com/aharris2404/aharris2404.github.ioarris2404.github.io/master/svgs/1f08ccc9cd7309ba1e756c3d9345ad9f.svg?invert_in_darkmode" align=middle width=35.64773519999999pt height=24.65753399999998pt/> time.
 
-Thus the total runtime is <img src="https://rawgit.com/aharris2404/aharris2404.github.io/None/svgs/1f08ccc9cd7309ba1e756c3d9345ad9f.svg?invert_in_darkmode" align=middle width=35.64773519999999pt height=24.65753399999998pt/>.
+Thus the total runtime is <img src="https://rawgit.com/aharris2404/aharris2404.github.ioarris2404.github.io/master/svgs/1f08ccc9cd7309ba1e756c3d9345ad9f.svg?invert_in_darkmode" align=middle width=35.64773519999999pt height=24.65753399999998pt/>.
 
 ## Results
 
-For the case given in the problem, this code produces the correct result that Player One won <img src="https://rawgit.com/aharris2404/aharris2404.github.io/None/svgs/ec743f6dfc0334fc2b308bc46ade48bc.svg?invert_in_darkmode" align=middle width=24.657628049999992pt height=21.18721440000001pt/> hands in total. On my machine, it runs in under one second.
+For the case given in the problem, this code produces the correct result that Player One won <img src="https://rawgit.com/aharris2404/aharris2404.github.ioarris2404.github.io/master/svgs/ec743f6dfc0334fc2b308bc46ade48bc.svg?invert_in_darkmode" align=middle width=24.657628049999992pt height=21.18721440000001pt/> hands in total. On my machine, it runs in under one second.
