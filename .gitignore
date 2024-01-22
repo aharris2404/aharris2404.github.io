@@ -6,4 +6,3 @@ tmp/
 jekyll/_site
 jekyll/.sass-cache
 jekyll/.jekyll-metadata
-jekyll/Gemfile.lock
