@@ -39,23 +39,45 @@
 ;; Load the publishing system
 (require 'ox-publish)
 
-(setq org-html-validation-link nil
-      org-html-head-include-scripts nil
-      org-html-head-include-default-style nil
-      org-html-head "<link rel=\"stylesheet\" href=\"https://cdn.simplecss.org/simple.min.css\" />")
+;;(setq org-html-validation-link nil
+;;      org-html-head-include-scripts nil
+;;      org-html-head-include-default-style nil
+;;      org-html-head "<link rel=\"stylesheet\" href=\"https://cdn.simplecss.org/simple.min.css\" />")
+
+;; (setq org-publish-project-alist
+;;      (list
+;;      (list "aharris2404.github.io"
+;;          :recursive t
+;;          :base-directory "./content"
+;;          :publishing-directory "./public"
+;;          :publishing-function 'org-html-publish-to-html
+;;          :with-author nil
+;;          :with-creator nil
+;;          :with-toc nil
+;;          :section-numbers nil
+;;          :time-stamp-file nil)))
 
 (setq org-publish-project-alist
-      (list
-       (list "aharris2404.github.io"
-            :recursive t
-            :base-directory "./content"
-            :publishing-directory "./public"
-            :publishing-function 'org-html-publish-to-html
-            :with-author nil
-            :with-creator nil
-            :with-toc nil
-            :section-numbers nil
-            :time-stamp-file nil)))
+      '(
+        ("org-andrew-harris"
+          ;; Path to org files.
+          :base-directory "~/code/aharris2404.github.io/org/"
+          :base-extension "org"
+          ;; Path to Jekyll project.
+          :publishing-directory "~/code/aharris2404.github.io/jekyll/"
+          :recursive t
+          :publishing-function org-html-publish-to-html
+          :headline-levels 4
+          :html-extension "html"
+          :with-toc nil
+          :body-only t)
+        ("org-static-andrew"
+          :base-directory "~/code/aharris2404.github.io/org/"
+          :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf\\|php"
+          :publishing-directory "~/code/aharris2404.github.io/"
+          :recursive t
+          :publishing-function org-publish-attachment)
+        ("andrew" :components ("org-andrew-harris" "org-static-andrew"))))
 
 (org-publish-all t)
 
