@@ -3,6 +3,6 @@ permalink: /about/
 title: "About"
 ---
 
-Tempor velit sint sunt ipsum tempor enim ad qui ullamco. Est dolore anim ad velit duis dolore minim sunt aliquip amet commodo labore. Ut eu pariatur aute ea aute excepteur laborum. Esse ea esse excepteur minim mollit qui cillum excepteur ex dolore magna. Labore deserunt fugiat incididunt incididunt sint ea. Consequat dolore aute laboris quis proident quis non et est consectetur ex eiusmod sit culpa.
+I'm a data scientist living and working in New York City. On an average day, you'll find me hacking away at my Emacs configuration, trying to perfect a veggie stir-fry dish in my wok, reading Romantic literature, or working towards my lifelong goal of a 2000 Elo rating in chess. I created this blog to share some of these amateur passions with the world, and to get a little bit of practice with simple web development. I hope you enjoy it, and please feel free to reach out and say hello!
 
-Cupidatat ea do et in excepteur in. Ad nostrud ut est esse eu duis ea sunt eiusmod. Aliquip tempor veniam sint elit fugiat. Velit incididunt laboris amet incididunt labore dolore irure velit excepteur commodo deserunt laborum. Consectetur eu fugiat veniam veniam Lorem labore magna eiusmod. Ea occaecat reprehenderit pariatur consectetur minim labore ut aliquip.
+Moskowitz was my family name prior to emigration. The Anti-Moscow Gambit is a risky and exciting chess opening, which I do not play, because I prefer to extinguish all life from the position and win after my opponent has fallen asleep.
